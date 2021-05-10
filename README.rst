@@ -19,12 +19,12 @@ Optimisitc Ethereum Kovan Addresses
 -----------------------------------
 - SecretRegistry at address:  0x26AF77FAdaECd0EE0B6E846f03Af906719e34A9C
 - TokenNetworkRegistry at address:  0x018c1b0a0149fD2Af4D3384d1Cc1884d082a6BB5
-- ServiceToken at address:  0xfEA9dE4586761Daa3C48CB88E296D1c8C0af7fCa
-- ServiceRegistry at address:  0x98C6564Dc4481B18c70Ba17E7638F29A713de580
-- UserDepositContract at address:  0xf6eE33CAC1cb8FeB51AF62Ca50B935C8506b862e
-- MonitoringService at address:  0x8EaBF84b23E506E4Ed17B648633F12f54004C845
-- OneToN at address:  0x3f54942c02965dBA8898D9224e63e11f13971D3a
-- TestToken at address:  0x3b8C79c55CE62D6A2A695B3F7fD371ADfdc2cA4A
+- ServiceToken at address:  0x59d38a1f67eC4da4D4048Cb03Ce05A6184E04171
+- ServiceRegistry at address:  0x16CefC4bd27F00a679155761535059E59D3Eb6EE
+- UserDepositContract at address:  0xD8f43e8a63E8520b4B64A7408248492be47Ee26A
+- MonitoringService at address:  0xb23F571d1B7D477B8e30e20bB449caA43eA0AC0a
+- OneToN at address:  0x8cFE0F3C27EA34E8d2e9e489029E1927909B7012
+- TestToken at address:  0xC3625520c494fc8Aa72d4E66448314F6fE9530eB
 
 Installation
 ------------
