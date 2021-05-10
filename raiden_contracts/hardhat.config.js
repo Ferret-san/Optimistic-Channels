@@ -11,16 +11,14 @@ module.exports = {
       }
     },
     optimism: {
-        url: 'http://127.0.0.1:8545',
-        accounts: {
-          mnemonic: 'test test test test test test test test test test test junk'
-        },
+        url: 'https://kovan.optimism.io',
+        accounts: [''],
         // This sets the gas price to 0 for all transactions on L2. We do this
         // because account balances are not automatically initiated with an ETH
         // balance (yet, sorry!).
         gasPrice: 0,
         gasLimit: 9999999,
-        chainId: 420,
+        chainId: 69,
         ovm: true // This sets the network as using the ovm and ensure contract will be compiled against that.
       }
   },
@@ -43,6 +41,6 @@ module.exports = {
     artifacts: "./artifacts"
   },
   namedAccounts: {
-    deployer: 0
+    deployer: '0xFb8C3ba8A46014400487f2fB4d539A5Ff7bC367D'
   },
 }

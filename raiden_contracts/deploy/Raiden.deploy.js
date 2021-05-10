@@ -10,6 +10,8 @@ const func = async(hre) => {
     const { deploy } = deployments
     const { deployer } = await getNamedAccounts()
 
+    const provider = ethers.getDefaultProvider();
+    const signer = new hre.ethers.Wallet('').connect(provider) 
     console.log('Deployer address: ', deployer)
     /**MAIN RAIDEN CONTRACTS */
     /**
@@ -52,7 +54,7 @@ const func = async(hre) => {
     /**SERVICES */
     const serviceToken = await deploy('CustomToken', {
         from: deployer,
-        args: [20000000, 18, 'ServiceToken', 'SVT'],
+        args: ['20000000000000000000000000', 18, 'ServiceToken', 'SVT'],
         log: true,
         gasPrice: 0,
         gasLimit: 6000000,
@@ -60,6 +62,8 @@ const func = async(hre) => {
 
     console.log("Succesfully deployed ServiceToken at address: ", serviceToken.address)
 
+    /** Factory for Custom Token Contract */
+    const CustomTokenFactory = await ethers.getContractFactory("CustomToken")
     /**
      * Deploys:
      *  - SecretRegistry 
@@ -120,7 +124,7 @@ const func = async(hre) => {
     /** Test token */
     const testToken = await deploy('CustomToken', {
         from: deployer,
-        args: [10000000 , 18, 'TestToken', 'TTT'],
+        args: ['10000000000000000000000000' , 18, 'TestToken', 'TTT'],
         log: true,
         gasPrice: 0,
         gasLimit: 6000000,
@@ -128,11 +132,23 @@ const func = async(hre) => {
 
     console.log("Succesfully deployed TestToken at address: ", testToken.address)
 
+
     /**Register the TTT token */
     console.log("Registering TestToken to the TokenNetworkRegistry...")
 
-    console.log(tokenNetworkRegistry)
-    //await tokenNetworkRegistry.createERC20TokenNetwork(testToken.address, 115792089237316195423570985008687907853269984665640564039457584007913129639935, 115792089237316195423570985008687907853269984665640564039457584007913129639935)
+    
+    const tokenNetworkRegistryFactory = await ethers.getContractFactory("TokenNetworkRegistry")
+    const TokenNetworkRegistry = new hre.ethers.Contract(tokenNetworkRegistry.address, tokenNetworkRegistryFactory.interface, signer)
+    await TokenNetworkRegistry.createERC20TokenNetwork(
+        testToken.address, 
+        10000000, 
+        10000000, 
+        {
+        from: deployer, 
+        gasPrice: 0,
+        gasLimit: 6000000,
+        }
+    )
 
 }
 
