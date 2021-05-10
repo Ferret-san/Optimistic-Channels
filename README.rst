@@ -5,6 +5,9 @@ Raiden Network Smart Contracts on Optimistic Kovan
 
 .. _Raiden Network Smart Contract specs: https://raiden-network-specification.readthedocs.io/en/latest/smart_contracts.html
 
+`Original Repo`_
+.. _OG Raiden Network Smart Contract repo: https://github.com/raiden-network/raiden-contracts
+
 Optimisitc Ethereum Kovan Addresses
 -----------------------------------
 - SecretRegistry at address:  0x26AF77FAdaECd0EE0B6E846f03Af906719e34A9C
