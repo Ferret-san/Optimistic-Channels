@@ -15,6 +15,17 @@ Prerequisites
 -  Python 3.7 or 3.8
 -  https://pip.pypa.io/en/stable/
 
+Optimisitc Ethereum Kovan Addresses
+-----------------------------------
+- SecretRegistry at address:  0x26AF77FAdaECd0EE0B6E846f03Af906719e34A9C
+- TokenNetworkRegistry at address:  0x018c1b0a0149fD2Af4D3384d1Cc1884d082a6BB5
+- ServiceToken at address:  0x59d38a1f67eC4da4D4048Cb03Ce05A6184E04171
+- ServiceRegistry at address:  0x16CefC4bd27F00a679155761535059E59D3Eb6EE
+- UserDepositContract at address:  0xD8f43e8a63E8520b4B64A7408248492be47Ee26A
+- MonitoringService at address:  0xb23F571d1B7D477B8e30e20bB449caA43eA0AC0a
+- OneToN at address:  0x8cFE0F3C27EA34E8d2e9e489029E1927909B7012
+- TestToken at address:  0xC3625520c494fc8Aa72d4E66448314F6fE9530eB
+
 Installation
 ------------
 
