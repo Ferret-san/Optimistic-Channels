@@ -1,5 +1,5 @@
-Raiden Network Smart Contracts
-==============================
+Raiden Network Smart Contracts on Optimistic Kovan
+==================================================
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
     :target: https://gitter.im/raiden-network/raiden?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
@@ -8,12 +8,6 @@ Raiden Network Smart Contracts
 `Raiden Network Smart Contract specs`_
 
 .. _Raiden Network Smart Contract specs: https://raiden-network-specification.readthedocs.io/en/latest/smart_contracts.html
-
-Prerequisites
--------------
-
--  Python 3.7 or 3.8
--  https://pip.pypa.io/en/stable/
 
 Optimisitc Ethereum Kovan Addresses
 -----------------------------------
