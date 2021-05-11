@@ -7,6 +7,8 @@ Raiden Network Smart Contracts on Optimistic Kovan
 
 OG Raiden Network Smart Contract repo: https://github.com/raiden-network/raiden-contracts
 
+Raiden Light client with Kovan Contract Support (SDK INITIALIZATION ISSUES): https://github.com/Ferret-san/light-client
+
 Optimisitc Ethereum Kovan Addresses
 -----------------------------------
 - SecretRegistry at address:  0x26AF77FAdaECd0EE0B6E846f03Af906719e34A9C
