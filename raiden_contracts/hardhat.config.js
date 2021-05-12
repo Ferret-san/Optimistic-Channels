@@ -7,7 +7,7 @@ module.exports = {
   networks: {
     optimism: {
         url: 'https://kovan.optimism.io',
-        accounts: [''],
+        accounts: [''], //USE A .ENV FILE OUR SUFFER THE CONSEQUENCES 
         // This sets the gas price to 0 for all transactions on L2. We do this
         // because account balances are not automatically initiated with an ETH
         // balance (yet, sorry!).

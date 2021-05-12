@@ -48,7 +48,7 @@ const func = async(hre) => {
     **/
     const tokenNetworkRegistry = await deploy('TokenNetworkRegistry', {
         from: deployer,
-        args: [secretRegistry.address, 69, 10, 50, 5], 
+        args: [secretRegistry.address, 69, 20, 555428, '115792089237316195423570985008687907853269984665640564039457584007913129639935'], 
         log: true,
         gasPrice: 0,
         gasLimit: 6000000,
@@ -74,7 +74,7 @@ const func = async(hre) => {
      */
     const serviceRegistry = await deploy('ServiceRegistry', {
         from: deployer,
-        args: [serviceToken.address, deployer, 100000 , 6, 5, 17280000, 1000, 15552000],
+        args: [serviceToken.address, deployer, '2000000000000000000000' , 6, 5, 17280000, 1000, 15552000],
         log: true,
         gasPrice: 0,
         gasLimit: 6000000,
@@ -88,7 +88,7 @@ const func = async(hre) => {
      */
     const userDepositContract = await deploy('UserDeposit', {
         from: deployer,
-        args: [serviceToken.address, 9007199254740990], //Using MAX_SAFE_INTEGER - 1 for testing purposes
+        args: [serviceToken.address, '115792089237316195423570985008687907853269984665640564039457584007913129639935'], 
         log: true,
         gasPrice: 0,
         gasLimit: 6000000,
