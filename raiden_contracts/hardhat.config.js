@@ -5,11 +5,6 @@ require('hardhat-deploy')
 
 module.exports = {
   networks: {
-    hardhat: {
-      accounts: {
-        mnemonic: 'test test test test test test test test test test test junk'
-      }
-    },
     optimism: {
         url: 'https://kovan.optimism.io',
         accounts: [''],

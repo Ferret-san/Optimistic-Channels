@@ -10,8 +10,14 @@ const func = async(hre) => {
     const { deploy } = deployments
     const { deployer } = await getNamedAccounts()
 
-    const provider = ethers.getDefaultProvider();
-    const signer = new hre.ethers.Wallet('').connect(provider) 
+    const provider = new ethers.providers.JsonRpcProvider("https://kovan.optimism.io");
+    provider.getBlockNumber().then((result) => {
+        console.log("Current block number: " + result);
+    });
+    const signer = new hre.ethers.Wallet('').connect(provider)
+    /**Sanity checks */
+    console.log('Wallet is: ', signer.getAddress()) 
+    console.log('Wallet provider is: ', signer.provider.connection)
     console.log('Deployer address: ', deployer)
     /**MAIN RAIDEN CONTRACTS */
     /**
@@ -40,10 +46,9 @@ const func = async(hre) => {
      * @param _max_token_networks the number of tokens that can be registered
        Note: passing MAX_UINT256 means no limits
     **/
-    const network = await hre.ethers.provider.getNetwork()
     const tokenNetworkRegistry = await deploy('TokenNetworkRegistry', {
         from: deployer,
-        args: [secretRegistry.address, network.chainId, 10, 50, 1], //Last 3 args should be different during production
+        args: [secretRegistry.address, 69, 10, 50, 5], 
         log: true,
         gasPrice: 0,
         gasLimit: 6000000,
@@ -51,6 +56,7 @@ const func = async(hre) => {
 
     console.log("Succesfully deployed TokenNetworkRegistry at address: ", tokenNetworkRegistry.address)
 
+    
     /**SERVICES */
     const serviceToken = await deploy('CustomToken', {
         from: deployer,
@@ -62,8 +68,6 @@ const func = async(hre) => {
 
     console.log("Succesfully deployed ServiceToken at address: ", serviceToken.address)
 
-    /** Factory for Custom Token Contract */
-    const CustomTokenFactory = await ethers.getContractFactory("CustomToken")
     /**
      * Deploys:
      *  - SecretRegistry 
@@ -113,7 +117,7 @@ const func = async(hre) => {
      */
      const oneToN = await deploy('OneToN', {
         from: deployer,
-        args: [userDepositContract.address, network.chainId, serviceRegistry.address],
+        args: [userDepositContract.address, 69, serviceRegistry.address],
         log: true,
         gasPrice: 0,
         gasLimit: 6000000,
@@ -135,20 +139,32 @@ const func = async(hre) => {
 
     /**Register the TTT token */
     console.log("Registering TestToken to the TokenNetworkRegistry...")
-
+    /**REDEPLOY EVERYTHING AND ALSO GET TOKEN NETWORK ADDRESS */
     
-    const tokenNetworkRegistryFactory = await ethers.getContractFactory("TokenNetworkRegistry")
-    const TokenNetworkRegistry = new hre.ethers.Contract(tokenNetworkRegistry.address, tokenNetworkRegistryFactory.interface, signer)
-    await TokenNetworkRegistry.createERC20TokenNetwork(
+    
+    const tokenNetworkRegistryArtifact = await deployments.getArtifact("TokenNetworkRegistry")
+    const TokenNetworkRegistry = new hre.ethers.Contract(tokenNetworkRegistry.address, tokenNetworkRegistryArtifact.abi, signer)
+    console.log("Succesfully got contract factory, registerting TTT token...")
+    const registration = await TokenNetworkRegistry.createERC20TokenNetwork(
         testToken.address, 
-        10000000, 
-        10000000, 
+        "115792089237316195423570985008687907853269984665640564039457584007913129639935", 
+        "115792089237316195423570985008687907853269984665640564039457584007913129639935", 
         {
         from: deployer, 
         gasPrice: 0,
         gasLimit: 6000000,
         }
     )
+    /** GET TOKEN NETWORK ADDRESS*/
+    const tokenNetworkAddress = await TokenNetworkRegistry.token_to_token_networks(testToken.address, {
+        from: deployer, 
+        gasPrice: 0,
+        gasLimit: 6000000,
+    })
+    
+    
+    console.log("Token Network Address is: ", tokenNetworkAddress)
+    
 
 }
 

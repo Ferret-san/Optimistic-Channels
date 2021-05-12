@@ -11,14 +11,15 @@ Raiden Light client with Kovan Contract Support (SDK INITIALIZATION ISSUES): htt
 
 Optimisitc Ethereum Kovan Addresses
 -----------------------------------
-- SecretRegistry at address:  0x26AF77FAdaECd0EE0B6E846f03Af906719e34A9C
-- TokenNetworkRegistry at address:  0x018c1b0a0149fD2Af4D3384d1Cc1884d082a6BB5
-- ServiceToken at address:  0x59d38a1f67eC4da4D4048Cb03Ce05A6184E04171
-- ServiceRegistry at address:  0x16CefC4bd27F00a679155761535059E59D3Eb6EE
-- UserDepositContract at address:  0xD8f43e8a63E8520b4B64A7408248492be47Ee26A
-- MonitoringService at address:  0xb23F571d1B7D477B8e30e20bB449caA43eA0AC0a
-- OneToN at address:  0x8cFE0F3C27EA34E8d2e9e489029E1927909B7012
-- TestToken at address:  0xC3625520c494fc8Aa72d4E66448314F6fE9530eB
+- SecretRegistry at address:  0xBA749e968e661728aAF232adF0075E6F30C8d49e
+- TokenNetworkRegistry at address:  0x1E86ECf0874F50d1050F1222E3bAFa60F0342ba7
+- ServiceToken at address:  0x1089C66edf8B63bDB3A9fbbAa87724AEA86F7412
+- ServiceRegistry at address:  0x6EA9618638f3EF73B6d95d27563Cb61A112c87D6
+- UserDepositContract at address:  0x4aEc7d9BE6DB3C101bff40c5A8451BCD880d0D54
+- MonitoringService at address:  0x961C4e8Ba2fbAA426980aa62DED1f0eA8daC6011
+- OneToN at address:  0xee01Aa7f069Edb12d8A0A03c4FB0f64e3f3B974D
+- TestToken at address:  0x1A9Ad8A4CA5e5d10Ae47Cc6C17e8Cc26aE2Ac893
+- Token Network Address (For TTT) is:  0xF6Aa9EccA8dD3c15683B029A10B35Ab4AC021586
 
 Deployment
 ----------
