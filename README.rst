@@ -18,8 +18,9 @@ Optimisitc Ethereum Kovan Addresses
 - UserDepositContract at address:  0xc3Fbcb0aADdFE6399e04fCADa42F92C9104Cb133
 - MonitoringService at address:  0xE37d878e97ec516225dC151f4A056e23460e177D
 - OneToN at address:  0x3CD189b2FC57BA8456C8060a2B2dDb054B0F4baF
+(The following are for testing purposes only!)
 - TestToken at address:  0xc6f7F48C1FF8389691464f3fe3AFbc9a8a0BbABC
-- Token Network Address (TTT Token) is:  0xa5D521b23d6765d6c7d329813c36DE05a6FF8A0d
+- OptimisticTestToken at address: 0x3c45e74eB3cd97959538789Ad0e821938eF50CE9
 
 Deployment
 ----------
