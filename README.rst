@@ -7,7 +7,9 @@ Raiden Network Smart Contracts on Optimistic Kovan
 
 OG Raiden Network Smart Contract repo: https://github.com/raiden-network/raiden-contracts
 
-Raiden Light client with Kovan Contract Support (SDK INITIALIZATION ISSUES): https://github.com/Ferret-san/light-client
+Raiden Light client with Kovan Contract Support: https://github.com/Ferret-san/light-client
+
+Note: if you don't see a token you minted or one of test tokens below available, go to devtools in your browser and in the console type: `raiden.monitorToken("address")`
 
 Optimisitc Ethereum Kovan Addresses
 -----------------------------------
