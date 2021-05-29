@@ -7,7 +7,9 @@ Raiden Network Smart Contracts on Optimistic Kovan
 
 OG Raiden Network Smart Contract repo: https://github.com/raiden-network/raiden-contracts
 
-Raiden Light client with Kovan Contract Support (SDK INITIALIZATION ISSUES): https://github.com/Ferret-san/light-client
+Raiden Light client with Kovan Contract Support: https://github.com/Ferret-san/light-client
+
+Note: if you don't see a token you minted or one of test tokens below available, go to devtools in your browser and in the console type: `raiden.monitorToken("address")`
 
 Optimisitc Ethereum Kovan Addresses
 -----------------------------------
@@ -18,8 +20,11 @@ Optimisitc Ethereum Kovan Addresses
 - UserDepositContract at address:  0xc3Fbcb0aADdFE6399e04fCADa42F92C9104Cb133
 - MonitoringService at address:  0xE37d878e97ec516225dC151f4A056e23460e177D
 - OneToN at address:  0x3CD189b2FC57BA8456C8060a2B2dDb054B0F4baF
+- (The following are for testing purposes only!)
 - TestToken at address:  0xc6f7F48C1FF8389691464f3fe3AFbc9a8a0BbABC
-- Token Network Address (TTT Token) is:  0xa5D521b23d6765d6c7d329813c36DE05a6FF8A0d
+- TokenNetwork (TestToken): 0xa5D521b23d6765d6c7d329813c36DE05a6FF8A0d
+- OptimisticTestToken at address: 0x3c45e74eB3cd97959538789Ad0e821938eF50CE9
+- TokenNetwork (OptimisticTestToken): 0x887dCf20d298898989529fd1773886489DE63333
 
 Deployment
 ----------
