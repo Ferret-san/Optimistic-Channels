@@ -144,6 +144,7 @@ class ContractSourceManager:
 
 def contracts_source_path(contracts_version: Optional[str]) -> Dict[str, Path]:
     data = contracts_data_path(contracts_version)
+    print("contracts_data_path: ", data)
     return contracts_source_path_with_stem(data.joinpath("source"))
 
 
@@ -204,3 +205,4 @@ def verify_single_precompiled_checksum_on_nonexistent_contract_name() -> None:
     _verify_single_precompiled_checksum(
         checked_checksums={}, contract_name="a", expected_checksum="abc"
     )
+

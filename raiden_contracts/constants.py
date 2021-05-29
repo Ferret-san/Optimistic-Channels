@@ -152,6 +152,7 @@ ID_TO_CHAINNAME: Dict[ChainID, str] = {
     ChainID(4): "rinkeby",
     ChainID(5): "goerli",
     ChainID(42): "kovan",
+    ChainID(69): "oe_kovan",
     ChainID(627): "smoketest",
 }
 
